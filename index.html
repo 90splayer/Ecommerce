@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | E-commerce product page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <wrapper>
+    <header>
+      <div class="leftHead">
+        <img class="menu" onclick="showMenu()" src="images/icon-menu.svg" alt="">
+      <h2 class="head">Sneakers</h2>
+      <div id="nav" class="nav">
+        <span>Collections</span>
+        <span>Men</span>
+        <span>Women</span>
+        <span>About</span>
+        <span>Contact</span>
+      </div>
+    </div>
+      <div class="user">
+        <img class="userCart" onclick="showCart()" src="images/icon-cart-black.svg" alt="basket">
+        <span id="checkNum" class="checkNum"></span>
+        <img class="ppicture" src="images/image-avatar.png" alt="profile">
+      </div>
+    </header>
+    <div class="headerLine"></div>
+    <div class="body">
+      <div class="images">
+        <img id="mainImage" class="main" src="images/image-product-1.jpg" alt="active">
+        <div class="bottomImages">
+          <div id="img1" onclick="changeImage(this.id)" class="img img1 clickImage"></div>
+          <div id="img2" onclick="changeImage(this.id)" class="img img2"></div>
+          <div id="img3" onclick="changeImage(this.id)" class="img img3"></div>
+          <div id="img4" onclick="changeImage(this.id)" class="img img4"></div>
+        </div>
+      </div>
+      <div class="imageDetails">
+        <h3 class="imageTitle">Sneaker Company</h3>
+        <h1 id="itemName">Fall Limited Edition Sneakers</h1>
+        <p class="imgText">These low-profile sneakers are your perfect casual wear companion. Featuring a 
+          durable rubber outer sole, they'll withstand everything the weather can offer.</p>
+          <div class="pricing">
+          <div class="price">
+            <h2 class="dollar">$<span id="price">125.00</span></h2>
+            <h3 class="promo">50%</h3>
+          </div>
+          <p class="oldPrice">$250.00</p>
+        </div>
+          <div class="addcart">
+            <div class="addCartToggle">
+            <span id="minus" onclick="subOne()">-</span>
+            <span id="number">0</span>
+            <span id="plus" onclick="addOne()">+</span>
+          </div>
+            <button id="addToCart" onclick="addToCart()"> <img src="images/icon-cart.svg" alt="cart"> Add to cart</button>
+          </div>
+      </div>
+    </div>
+  </wrapper>
+  <img id="close" class="" onclick="closeMenu()" src="images/icon-close.svg" alt="">
+
+  <Cart id="cart">
+    <h3 class="cartHead">Cart</h3>
+    <div class="line"></div>
+    <div id="carItem" class="cartItem">
+    <img id="carImage" src="" alt="">
+    <div class="text">
+    <p>Fall Limited Edition Sneakers</p>
+    <div class="cacPrice">
+    <span id="cartPrice"></span>
+    <span id="finalPrice"></span>
+  </div>
+    </div>
+    <img class="delete" onclick="deleteItem()" src="images/icon-delete.svg" alt="">
+  </div>
+  <span id="emptyCart" class="emptyCart">Your cart is empty</span>
+    <button id="buttn">Checkout</button>
+  </Cart>
+
+  
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Michael Ojogbo</a>.
+  </div>
+  <script src='app.js'></script>
+</body>
+</html>
