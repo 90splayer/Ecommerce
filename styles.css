@@ -128,10 +128,10 @@ box{
 .imageDetails h1{
     width: 10em;
 }
-.imageText{
+.imgText{
     color: hsl(219, 9%, 45%);
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 0.9em;
 }
 .price{
     display: flex;
@@ -298,7 +298,7 @@ Cart button {
 .menu{
     display: none;
 }
-.close{
+.clos{
     display: none;
 }
 
